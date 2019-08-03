@@ -18,7 +18,7 @@ class UserRepository (
     suspend fun userLogin(email: String, password: String): AuthResponse{
 
         return apiRequest {
-            MyApi().userLogin(email,password)
+            api.userLogin(email,password)
         }
     }
 

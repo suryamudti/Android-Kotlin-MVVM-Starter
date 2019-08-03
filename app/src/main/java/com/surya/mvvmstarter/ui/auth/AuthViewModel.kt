@@ -6,6 +6,7 @@ import androidx.lifecycle.ViewModel
 import com.surya.mvvmstarter.data.repository.UserRepository
 import com.surya.mvvmstarter.util.ApiException
 import com.surya.mvvmstarter.util.Coroutines
+import com.surya.mvvmstarter.util.NoInternetException
 
 /**
  * Created by suryamudti on 03/08/2019.
@@ -49,6 +50,8 @@ class AuthViewModel(
             }catch (e: ApiException){
                 authListener?.onFailure(e.message!!)
 
+            }catch (e: NoInternetException){
+                authListener?.onFailure(e.message!!)
             }
         }
 
