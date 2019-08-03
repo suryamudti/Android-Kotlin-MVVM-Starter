@@ -17,3 +17,4 @@ Below is the technology included
 - Navigation
 - Kodein
 - Coroutines
+- Data Binding
