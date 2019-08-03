@@ -2,10 +2,11 @@
 
 Android MVVM Architecture using Kotlin
 
-Kotlin and Android
+# Kotlin and Android
+
 ![Screenshot](kotlinandroid.jpg)
 
-MVVM Architecture
+# MVVM Architecture
 ![Screenshot](mvvm2.png)
 
 Below is the technology included
