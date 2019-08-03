@@ -4,9 +4,12 @@ import android.app.Application
 import com.surya.mvvmstarter.data.db.AppDatabase
 import com.surya.mvvmstarter.data.network.MyApi
 import com.surya.mvvmstarter.data.network.NetworkConnectionInterceptor
+import com.surya.mvvmstarter.data.repository.QuotesRepository
 import com.surya.mvvmstarter.data.repository.UserRepository
 import com.surya.mvvmstarter.ui.auth.AuthViewModel
 import com.surya.mvvmstarter.ui.auth.AuthViewModelFactory
+import com.surya.mvvmstarter.ui.home.profile.ProfileViewModelFactory
+import com.surya.mvvmstarter.ui.home.quotes.QuotesViewModelFactory
 import org.kodein.di.Kodein
 import org.kodein.di.KodeinAware
 import org.kodein.di.android.x.androidXModule
@@ -29,7 +32,11 @@ class MVVMApplication : Application(
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
         bind() from singleton { UserRepository(instance(),instance()) }
+        bind() from singleton { QuotesRepository(instance(),instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
+        bind() from provider { ProfileViewModelFactory(instance()) }
+        bind() from provider { QuotesViewModelFactory(instance()) }
+
 
 
 

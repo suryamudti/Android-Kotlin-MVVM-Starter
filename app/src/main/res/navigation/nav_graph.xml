@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/nav_graph"
+            app:startDestination="@id/profileFragment">
+    <fragment android:id="@+id/profileFragment" android:name="com.surya.mvvmstarter.ui.home.profile.ProfileFragment"
+              android:label="ProfileFragment"/>
+    <fragment android:id="@+id/fragmentQuote" android:name="com.surya.mvvmstarter.ui.home.quotes.QuotesFragment"
+              android:label="Quotes" tools:layout="@layout/quote_fragment"/>
+</navigation>

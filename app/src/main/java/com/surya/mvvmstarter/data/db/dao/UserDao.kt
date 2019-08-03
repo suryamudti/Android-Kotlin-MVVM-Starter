@@ -1,4 +1,4 @@
-package com.surya.mvvmstarter.data.db
+package com.surya.mvvmstarter.data.db.dao
 
 import androidx.lifecycle.LiveData
 import androidx.room.Dao
