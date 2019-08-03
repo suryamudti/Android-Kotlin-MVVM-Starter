@@ -3,7 +3,7 @@
 Android MVVM Architecture using Kotlin
 
 ![Screenshot](kotlinandroid.jpg)
-![Screenshot](mvvm.png)
+![Screenshot](mvvm2.png)
 
 below is the technology included
 - Room
