@@ -2,6 +2,9 @@
 
 Android MVVM Architecture using Kotlin
 
+![Screenshot](kotlinandroid.jpg)
+![Screenshot](mvvm.png)
+
 below is the technology included
 - Room
 - LiveData
