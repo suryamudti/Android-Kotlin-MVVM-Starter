@@ -14,7 +14,12 @@ Below is the technology included
 - LiveData
 - ViewModel
 - Retrofit
+- GSON
 - Navigation
 - Kodein
 - Coroutines
 - Data Binding
+
+
+
+Thanks !
