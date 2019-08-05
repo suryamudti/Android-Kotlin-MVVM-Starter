@@ -6,9 +6,13 @@
         android:layout_height="match_parent"
         tools:context="com.surya.mvvmstarter.ui.home.quotes.QuotesFragment">
 
-    <TextView
+    <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerview"
+            tools:listitem="@layout/item_quote"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Hello"/>
+            android:layout_height="match_parent">
+
+
+    </androidx.recyclerview.widget.RecyclerView>
 
 </FrameLayout>

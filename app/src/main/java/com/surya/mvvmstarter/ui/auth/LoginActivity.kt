@@ -44,9 +44,7 @@ class LoginActivity : AppCompatActivity(),AuthListener, KodeinAware {
             }
         })
 
-
         progressBar.hide()
-
     }
 
 

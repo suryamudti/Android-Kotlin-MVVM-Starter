@@ -4,6 +4,7 @@ import android.app.Application
 import com.surya.mvvmstarter.data.db.AppDatabase
 import com.surya.mvvmstarter.data.network.MyApi
 import com.surya.mvvmstarter.data.network.NetworkConnectionInterceptor
+import com.surya.mvvmstarter.data.preferences.PreferencesProvider
 import com.surya.mvvmstarter.data.repository.QuotesRepository
 import com.surya.mvvmstarter.data.repository.UserRepository
 import com.surya.mvvmstarter.ui.auth.AuthViewModel
@@ -25,21 +26,16 @@ class MVVMApplication : Application(
 
 ), KodeinAware{
     override val kodein = Kodein.lazy{
-
         import(androidXModule(this@MVVMApplication))
-
         bind() from singleton { NetworkConnectionInterceptor(instance()) }
         bind() from singleton { MyApi(instance()) }
         bind() from singleton { AppDatabase(instance()) }
+        bind() from singleton { PreferencesProvider(instance()) }
         bind() from singleton { UserRepository(instance(),instance()) }
-        bind() from singleton { QuotesRepository(instance(),instance()) }
+        bind() from singleton { QuotesRepository(instance(),instance(),instance()) }
         bind() from provider { AuthViewModelFactory(instance()) }
         bind() from provider { ProfileViewModelFactory(instance()) }
         bind() from provider { QuotesViewModelFactory(instance()) }
-
-
-
-
     }
 
 }
