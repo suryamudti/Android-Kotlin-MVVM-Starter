@@ -46,7 +46,6 @@ class QuotesFragment : Fragment(), KodeinAware {
     private fun bindUI() = Coroutines.main {
         viewModel.quotes.await().observe(this, Observer {
             initRecycleView(it.toQuoteItem())
-
         })
     }
 
@@ -63,7 +62,7 @@ class QuotesFragment : Fragment(), KodeinAware {
     }
 
     private fun List<Quote>.toQuoteItem() : List<QuotesItem>{
-        return  this.map {
+        return this.map {
 
             QuotesItem(it)
         }

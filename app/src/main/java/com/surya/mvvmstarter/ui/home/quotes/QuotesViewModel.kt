@@ -9,6 +9,7 @@ class QuotesViewModel(
 ) : ViewModel() {
 
     val quotes by lazyDeferred {
+
         repository.getQuotes()
     }
 }

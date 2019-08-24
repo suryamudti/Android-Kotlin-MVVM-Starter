@@ -29,6 +29,7 @@ class QuotesRepository(
     private val quotes = MutableLiveData<List<Quote>>()
 
     init {
+
         quotes.observeForever {
             saveQuotes(it)
         }

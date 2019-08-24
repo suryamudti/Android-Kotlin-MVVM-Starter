@@ -22,7 +22,7 @@ class QuotesItem(
 
             val intent = Intent(viewBinding.root.context, QuotesDetailActivity::class.java)
             intent.putExtra("quote",quote)
-            viewBinding.root.context.startActivity(intent)
+            it.context.startActivity(intent)
 
         }
         viewBinding.setQuote(quote)
